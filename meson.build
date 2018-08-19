@@ -19,6 +19,7 @@ executable(
     'src/Telefax.vala',
     'src/Main.vala',
     'src/MainWindow.vala',
+    'src/Widgets/Welcome.vala',
     'src/Common/BaseMainWindow.vala',
     'src/Common/SavedState.vala',
     'src/Common/Settings.vala',

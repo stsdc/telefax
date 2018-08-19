@@ -2,7 +2,7 @@
 Name=Telefax
 GenericName=Telefax
 Comment=Manage processes and monitor resource usage of the system
-Categories=Internet;
+Categories=Network
 Exec=com.github.stsdc.telefax %U
 Icon=com.github.stsdc.telefax
 Terminal=false

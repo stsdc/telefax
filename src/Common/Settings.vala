@@ -5,7 +5,7 @@ namespace Telefax.Common {
         private static Settings? settings = null;
 
         private Settings(){
-          base ("org.pantheon.telefax.settings");
+          base ("com.github.stsdc.telefax.settings");
         }
 
         public static Settings get_default () {

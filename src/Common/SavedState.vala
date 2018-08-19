@@ -14,7 +14,7 @@ namespace Telefax.Common {
         }
 
         private SavedState () {
-            base ("org.pantheon.telefax.saved-state");
+            base ("com.github.stsdc.saved-state");
         }
     }
 

@@ -6,26 +6,11 @@ namespace Telefax {
 
 		public static MainWindow main_window { get; private set; }
 
- 		construct {
-			build_data_dir = Constants.DATADIR;
-	        build_pkg_data_dir = Constants.PKGDATADIR;
-	        build_release_name = Constants.RELEASE_NAME;
-	        build_version = Constants.VERSION;
-	        program_name = "Telegram";
-	        exec_name = "telegram";
-
-	        application_id = "org.pantheon.telegram";
-	        app_icon = "TODO";
-        	app_launcher = "telegram.desktop";
-
-	        main_url = "https://launchpad.net/noise";
-        	bug_url = "https://bugs.launchpad.net/noise/+filebug";
-    
-        	main_url = "https://github.com/tabasku/telefax";
-        	bug_url = "https://github.com/tabasku/telefax/issues";
-
-        	about_authors = {"Joni Kurunsaari <joni.kurunsaari@gmail.com>",
-                         	 "Jussi Virtanen <virtanenjt@gmail.com>"};
+		construct {
+            program_name = "Monitor";
+            application_id = "com.github.stsdc.telefax";
+            exec_name = "com.github.stsdc.telefax";
+            app_launcher = application_id + ".desktop";
 		}
 
 		public Telefax(){

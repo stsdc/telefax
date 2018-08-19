@@ -1,3 +1,4 @@
 *~
 src/api_id
-build/**
+build
+.vscodes

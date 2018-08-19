@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Telefax
+GenericName=Telefax
+Comment=Manage processes and monitor resource usage of the system
+Categories=Internet;
+Exec=com.github.stsdc.telefax %U
+Icon=com.github.stsdc.telefax
+Terminal=false
+Type=Application
+X-GNOME-Gettext-Domain=telefax
+Keywords=Telegram;Messenger;Communicator;
+X-GNOME-UsesNotifications=true

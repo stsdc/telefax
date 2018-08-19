@@ -10,14 +10,12 @@ namespace Telefax {
             program_name = "Monitor";
             application_id = "com.github.stsdc.telefax";
             exec_name = "com.github.stsdc.telefax";
-            app_launcher = application_id + ".desktop";
+			app_launcher = application_id + ".desktop";
+			build_version = "0.1.0";
 		}
 
 		public Telefax(){
-			if (DEBUG)
-                Granite.Services.Logger.DisplayLevel = Granite.Services.LogLevel.DEBUG;
-           	else
-                Granite.Services.Logger.DisplayLevel = Granite.Services.LogLevel.INFO;
+			Granite.Services.Logger.DisplayLevel = Granite.Services.LogLevel.INFO;
 		}
 
 		protected override void activate () {
@@ -28,6 +26,12 @@ namespace Telefax {
 			}
 
 			main_window.present ();
+		}
+
+		public static int main ( string[] args ) {
+			Gtk.init (ref args);
+			var telefax = new Telefax();
+			return telefax.run(args);
 		}
 	}
 }

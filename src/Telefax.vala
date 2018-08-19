@@ -7,7 +7,7 @@ namespace Telefax {
 		public static MainWindow main_window { get; private set; }
 
 		construct {
-            program_name = "Monitor";
+            program_name = "Telefax";
             application_id = "com.github.stsdc.telefax";
             exec_name = "com.github.stsdc.telefax";
 			app_launcher = application_id + ".desktop";

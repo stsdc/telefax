@@ -1,5 +1,5 @@
 using Telefax.Common;
-
+using TD;
 namespace Telefax {
 
     public class MainWindow : BaseMainWindow {
@@ -23,8 +23,12 @@ namespace Telefax {
 
         private void create_layout () {
 
-            //TODO: Application structure here...
+            var client = new JSONClient ();
+            string s = "{\"@type\": \"getAuthorizationState\"}";
+            client.send (s);
+            var  res = client.receive (1.0);
 
+            info ("received: %s", res);
         }
 
         private void login_completed () {

@@ -16,6 +16,10 @@ c_args = [
 
 add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi')], language: 'vala')
 
+tdjson_lib = meson.get_compiler('c').find_library('libtdjson')
+tdjson_vapi = meson.get_compiler('vala').find_library('libtdjson', dirs: join_paths(meson.current_source_dir(), 'vapi'))
+tdjson_dep = declare_dependency(dependencies: [tdjson_lib, tdjson_vapi])
+
 executable(
     meson.project_name(),
     'src/Telefax.vala',
@@ -33,10 +37,12 @@ executable(
         dependency('gio-2.0'),
         dependency('gobject-2.0'),
         dependency('gio-unix-2.0'),
+
+        tdjson_dep,
         
         meson.get_compiler('c').find_library('m', required : false),
         meson.get_compiler('vala').find_library('posix'),
-        meson.get_compiler('c').find_library('libtdjson'),
+        # meson.get_compiler('c').find_library('libtdjson'),
     ],
     install: true
 )

@@ -42,7 +42,6 @@ executable(
         
         meson.get_compiler('c').find_library('m', required : false),
         meson.get_compiler('vala').find_library('posix'),
-        # meson.get_compiler('c').find_library('libtdjson'),
     ],
     install: true
 )

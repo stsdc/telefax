@@ -39,12 +39,9 @@ namespace TD {
          * @param request JSON-serialized null-terminated request to TDLib.
          * @return JSON-serialized null-terminated request response. May be NULL if the request can't be parsed.
          */
-        public string execute {
-			[CCode (cname = "td_json_client_execute")]
-            get;
-            [CCode (cname = "td_json_client_execute")]
-			set;
-        }
+
+        [CCode (cname = "td_json_client_receive")]
+        public string execute (string request);
     }
     
 }

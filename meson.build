@@ -28,6 +28,7 @@ executable(
     'src/Common/BaseMainWindow.vala',
     'src/Common/SavedState.vala',
     'src/Common/Settings.vala',
+    'src/Telegram/TDLibParameters.vala',
     c_args: c_args,
     dependencies: [
         dependency('glib-2.0'),
@@ -37,6 +38,7 @@ executable(
         dependency('gio-2.0'),
         dependency('gobject-2.0'),
         dependency('gio-unix-2.0'),
+        dependency('json-glib-1.0'),
 
         tdjson_dep,
         

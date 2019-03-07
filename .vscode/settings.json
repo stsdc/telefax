@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        ".jsbeautifyrc": "jsonc",
+        "condition_variable": "cpp"
+    }
+}

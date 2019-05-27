@@ -14,10 +14,11 @@ c_args = [
     '-w'
 ]
 
+
 add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi')], language: 'vala')
 
-tdjson_lib = meson.get_compiler('c').find_library('libtdjson')
-tdjson_vapi = meson.get_compiler('vala').find_library('libtdjson', dirs: join_paths(meson.current_source_dir(), 'vapi'))
+tdjson_lib = meson.get_compiler('c').find_library('tdjson')
+tdjson_vapi = meson.get_compiler('vala').find_library('tdjson', dirs: join_paths(meson.current_source_dir(), 'vapi'))
 tdjson_dep = declare_dependency(dependencies: [tdjson_lib, tdjson_vapi])
 
 executable(

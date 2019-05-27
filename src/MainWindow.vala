@@ -40,8 +40,8 @@ namespace Telefax {
 
             var client = new JSONClient ();
             
-            client.send (serialized);
-            client.send ("{\"@type\": \"checkDatabaseEncryptionKey\"}");
+            //  client.send (serialized);
+            //  client.send ("{\"@type\": \"checkDatabaseEncryptionKey\"}");
 
             //  info ("received: %s", res);
 
@@ -57,8 +57,8 @@ namespace Telefax {
 
             //  print("r: '%s'\ns: '%s'\nequals: %s\n", raw, serialized, str_equal(raw, serialized).to_string());
             //  client.send ("{\"@type\": \"getMe\"}");
-            var res2 = client.receive(10.0);
-            info ("received2: %s", res2);
+            //  var res2 = client.receive(10.0);
+            //  info ("received2: %s", res2);
         }
 
         private void login_completed () {

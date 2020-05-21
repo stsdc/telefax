@@ -15,7 +15,7 @@ namespace Telefax {
 		}
 
 		public Telefax(){
-			Granite.Services.Logger.DisplayLevel = Granite.Services.LogLevel.INFO;
+			Granite.Services.Logger.DisplayLevel = Granite.Services.LogLevel.DEBUG;
 		}
 
 		protected override void activate () {
